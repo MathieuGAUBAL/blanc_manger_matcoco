@@ -36,6 +36,8 @@ const rootReducer = (state, action) => {
   let player3 = STORE.player3;
   let player4 = STORE.player4;
 
+  
+
   let points1 = STORE.points1;
   let points2 = STORE.points2;
   let points3 = STORE.points3;

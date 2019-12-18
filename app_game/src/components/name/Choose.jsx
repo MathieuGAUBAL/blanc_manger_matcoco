@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Choose.css";
 import { connect } from "react-redux";
+import { Link } from 'react-router-dom';
 
 class Choose extends Component {
   constructor(props) {
@@ -32,8 +33,11 @@ class Choose extends Component {
   submitForm = e => {
     e.preventDefault();
 
+    console.log('hello')
+
     let player1 = this.state.player1;
     let play1 = { type: "get_player1", player1: player1 };
+   
     this.props.dispatch(play1);
 
     let player2 = this.state.player2;
@@ -50,6 +54,7 @@ class Choose extends Component {
   };
 
   render() {
+    console.log(this.state)
     return (
       <div className='d-flex '>
         <div className=' black_margin col-md-2 col-lg-2'></div>

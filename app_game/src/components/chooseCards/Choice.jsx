@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./choice.css";
 import { connect } from "react-redux";
+import { Link } from 'react-router-dom';
 
 class Choice extends Component {
   constructor(props) {
