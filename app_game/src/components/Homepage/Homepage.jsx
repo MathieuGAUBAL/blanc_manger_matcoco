@@ -9,7 +9,7 @@ class Homepage extends Component {
             <div className="accueil">
                 <div className="logo">
                     <img src="/images/bmc.png" alt="logo accueil"/>
-                    <Link to='/'><button className="bouton-go">GO</button></Link>
+                    <Link to='/choose'><button className="bouton-go">GO</button></Link>
                 </div> 
             </div>
         )
