@@ -1,11 +1,20 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import Choose from "./components/name/Choose";
-import Choice from "./components/chooseCards/Choice";
+import React from 'react';
+import './App.css';
+import Homepage from './components/Homepage/Homepage';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 
 function App() {
-  return <div></div>;
+  return (
+    <div className="App">
+      <Router>
+        <Switch>
+          <Route exact path='/' exact component={Homepage}/>
+        </Switch>
+      </Router>
+
+    </div>
+  );
 }
 
 export default App;
