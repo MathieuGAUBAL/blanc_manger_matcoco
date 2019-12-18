@@ -1,0 +1,80 @@
+.score {
+  width: 100vh;
+  height: 6rem;
+  color: white;
+  font-size: 1rem;
+}
+
+.mrscore {
+  margin-left: 6%;
+}
+hr {
+  z-index: 1000;
+  border-top: 1px dashed white;
+}
+
+.border-bottom {
+  border-bottom: 2px solid white;
+}
+
+.line {
+  margin: 0;
+  border-top: 3px dotted black;
+}
+
+.borderScore {
+  margin-top: 2%;
+}
+
+.colordiv {
+  background-color: #f14e4e;
+  color: white;
+  padding: 10px;
+  box-shadow: 0 0 5px black;
+  border-radius: 5px;
+}
+
+.card {
+  height: 50vh;
+  /* width: 70%; */
+  margin: auto;
+  margin-top: 5%;
+  border-radius: 25px;
+  box-shadow: 0 0 5px black;
+  background: #1c4654;
+}
+
+.titleCard {
+  color: white;
+  font-size: 1rem;
+  margin-top: 5%;
+  font-weight: 1000;
+  text-align: center;
+}
+
+.paraCard {
+  margin-top: 10%;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.select {
+  width: 20%;
+}
+
+.instructions {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.black_margin {
+  background-color: black;
+  height: 800px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 720px) {
+  .black_margin {
+    display: none;
+  }
+}
