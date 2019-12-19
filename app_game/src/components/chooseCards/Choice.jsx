@@ -209,6 +209,7 @@ class Choice extends Component {
                 </label>
               </div>
 
+
               <div className='d-flex flex-row  '>
                 <div className='d-flex justify-content-center buttonScore  '>
                   <Link to='/Trophy'>
@@ -223,14 +224,15 @@ class Choice extends Component {
                 </div>
 
                 <div className='d-flex justify-content-center buttonScore'>
-                  <button
+                  <Link className="link-mdr" to='/Answer'><button
                     type='submit'
                     value='envoyer'
                     className='btn-block btn btn-lg buttonColor'
                   >
                     Fusion des cartes
-                  </button>
+                  </button></Link>
                 </div>
+
               </div>
             </form>
           </div>
@@ -242,6 +244,7 @@ class Choice extends Component {
 }
 
 const mapStateToProps = state => {
+  console.log(state.points1);
   return {
     player1: state.player1,
     player2: state.player2,
