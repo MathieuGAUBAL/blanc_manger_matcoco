@@ -5,6 +5,7 @@ import Choose from './components/name/Choose';
 import Choice from './components/chooseCards/Choice';
 import Trophy from './components/trophy/Trophy';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Answer from './components/anwser/Answer';
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
           <Route path='/Choose' component={Choose}/>
           <Route path='/Choice' component={Choice}/>
           <Route path='/Trophy' component={Trophy}/>
-
+          <Route path='/Answer' component={Answer}/>
         </Switch>
       </Router>
 

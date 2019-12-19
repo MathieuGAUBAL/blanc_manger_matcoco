@@ -73,6 +73,11 @@ hr {
   height: 800px;
 }
 
+.link-mdr{
+
+  width:100%;
+}
+
 @media screen and (min-width: 0px) and (max-width: 720px) {
   .black_margin {
     display: none;

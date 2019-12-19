@@ -43,6 +43,7 @@ const rootReducer = (state, action) => {
   let points3 = STORE.points3;
   let points4 = STORE.points4;
 
+
   let numero1 = STORE.numero1;
   let numero2 = STORE.numero2;
   let numero3 = STORE.numero3;
@@ -77,9 +78,8 @@ const rootReducer = (state, action) => {
     //points
 
     case GET_POINTS1.type:
-      STORE.points1 = action.points1;
-      points1 = action.points1;
-      console.log(points1);
+      STORE.points1 += 1;
+      console.log(STORE.points1);
       break;
 
     case GET_POINTS2.type:
@@ -128,13 +128,15 @@ const rootReducer = (state, action) => {
       break;
   }
 
+  console.log("STORE : ", STORE.points1);
+
   return {
     player1: player1,
     player2: player2,
     player3: player3,
     player4: player4,
 
-    points1: points1,
+    points1: STORE.points1,
     points2: points2,
     points3: points3,
     points4: points4,
