@@ -49,7 +49,7 @@ class Choose extends Component {
         <div className=' black_marginPseudo col-md-2 col-lg-2'></div>
         <div className='flex-column w-100'>
           <div className='d-flex justify-content-center align-items-center col-sm-12 mt-2 '>
-            <h1 className='font-pseudo align-items-center'>
+            <h1 className='font-pseudo align-items-center mt-5 mb-5'>
               Balance ton pseudo!
             </h1>
           </div>
@@ -60,7 +60,7 @@ class Choose extends Component {
                   <div className='resize'>
                     <img
                       className='imageResize'
-                      src='./images/test1.png'
+                      src='/images/avatar-lou.png'
                       alt=''
                     />
                   </div>
@@ -82,7 +82,7 @@ class Choose extends Component {
                   <div className='resize'>
                     <img
                       className='imageResize'
-                      src='./images/test1.png'
+                      src='/images/avatar-alex.png'
                       alt=''
                     />
                   </div>
@@ -104,7 +104,7 @@ class Choose extends Component {
                   <div className='resize'>
                     <img
                       className='imageResize'
-                      src='./images/test1.png'
+                      src='/images/avatar-mat.png'
                       alt=''
                     />
                   </div>
@@ -122,11 +122,11 @@ class Choose extends Component {
                   </div>
                 </div>
 
-                <div className='d-flex col-xs-12 mt-3'>
+                <div className='d-flex col-xs-12 mt-3 mb-5'>
                   <div className='resize'>
                     <img
                       className='imageResize'
-                      src='./images/test1.png'
+                      src='/images/avatar-arm.png'
                       alt=''
                     />
                   </div>
