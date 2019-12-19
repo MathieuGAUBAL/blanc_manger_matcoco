@@ -18,10 +18,7 @@ class Answer extends Component {
             points3: 0,
             points4: 0,
             randomDescription: [],
-            array_player_answer: ["1 C'est à cela qu'on reconnait un Lensois... blagergersg rgrgsergerg rg",
-                "2 C'est à cela qu'on reconnait un Lensois... blagergersg rgrgsergerg rg",
-                "3 C'est à cela qu'on reconnait unzefzff Lensois... blagergersg rgrgsergerg rg",
-                "4 TEXT 4ergergre gre jtyjtyjyj tyj tyj ger gre ger ger"],
+            array_player_answer: [],
             player_answser_ref: []
         }
     }
@@ -35,28 +32,17 @@ class Answer extends Component {
 
         switch (awardAdd1) {
             case 1:
-                
                 this.props.dispatch({type:GET_POINTS1.type} );
                 break;
             case 2:
-                let points2 = this.state.points2;
-                this.setState({
-                    points2: points2 += 1
-                })
+                this.props.dispatch({type:GET_POINTS2.type} );
+                
                 break;
             case 3:
-                let points3 = this.state.points3;
-                this.setState({
-                    points3:points3 += 1    
-        
-                })
-
+                this.props.dispatch({type:GET_POINTS3.type} );
                 break;
             case 4:
-                let points4 = this.state.points4;
-                this.setState({
-                    points4:points4 += 1
-                })
+                this.props.dispatch({type:GET_POINTS4.type} );
                 break;
             default:
                 console.log();
@@ -72,7 +58,6 @@ class Answer extends Component {
         for (let j in this.state.array_player_answer) {
             this.state.player_answser_ref.push(this.state.array_player_answer[j]);
         }
-        console.log(this.state.player_answser_ref);
 
         let randswer = this.state.array_player_answer;
         let randomDescription = [];
@@ -88,17 +73,26 @@ class Answer extends Component {
 
     }
 
+
     componentDidMount() {
+        this.getPlayerCard();
         this.answer_generation();
+    }
+
+    getPlayerCard(){
+        this.state.array_player_answer.push(this.props.playercard1);
+        this.state.array_player_answer.push(this.props.playercard2);
+        this.state.array_player_answer.push(this.props.playercard3);
+        this.state.array_player_answer.push(this.props.playercard4);
     }
 
 
     render() {
-        console.log(" SCORE : ", this.state);
+        console.log(this.state.array_player_answer);
         return (
             <div className="container d-flex flex-column justify-content-around answer-group">
                 <div className="game-card">
-                    <h4>Il était tout nu .retgretretre treergergergergergerg erg erg erg erg ergre trete..</h4>
+                    <h4>{this.props.gamecard}</h4>
                 </div>
 
                 <div className="player-card">
@@ -127,7 +121,16 @@ class Answer extends Component {
 
 const mapStateToProps = state => {
     return ({
-        points1:state.points1
+        points1:state.points1,
+        points2:state.points2,
+        points3:state.points3,
+        points4:state.points4,
+        playercard1:state.playercard1,
+        playercard2:state.playercard2,
+        playercard3:state.playercard3,
+        playercard4:state.playercard4,
+        gamecard:state.gamecard
+
     })
 }
 

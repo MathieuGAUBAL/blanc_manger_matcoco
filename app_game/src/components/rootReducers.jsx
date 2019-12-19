@@ -98,25 +98,19 @@ const rootReducer = (state, action) => {
 
     case GET_POINTS1.type:
       STORE.points1 += 1;
-      console.log(STORE.points1);
+
       break;
 
     case GET_POINTS2.type:
-      STORE.points2 = action.points2;
-      points2 = action.points2;
-      console.log(points2);
+      STORE.points2 += 1;
       break;
 
     case GET_POINTS3.type:
-      STORE.points3 = action.points3;
-      points3 = action.points3;
-      console.log(points3);
+      STORE.points3 += 1;
       break;
 
     case GET_POINTS4.type:
-      STORE.points4 = action.points4;
-      points4 = action.points4;
-      console.log(points4);
+      STORE.points4 += 1;
       break;
 
     case GET_NUMERO1.type:
@@ -177,7 +171,10 @@ const rootReducer = (state, action) => {
       break;
   }
 
-  console.log("STORE : ", STORE.points1);
+  console.log('Score player 1 : ',STORE.points1);
+  console.log('Score player 2 : ',STORE.points2);
+  console.log('Score player 3 : ',STORE.points3);
+  console.log('Score player 4 : ',STORE.points4);
 
   return {
     player1: player1,
@@ -186,9 +183,9 @@ const rootReducer = (state, action) => {
     player4: player4,
 
     points1: STORE.points1,
-    points2: points2,
-    points3: points3,
-    points4: points4,
+    points2: STORE.points2,
+    points3: STORE.points3,
+    points4: STORE.points4,
 
     numero1: numero1,
     numero2: numero2,
