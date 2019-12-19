@@ -40,7 +40,7 @@ router.get("/:id", (req, res) => {
 
 router.post("/", (req, res) => {
   connection.query(
-    "INSERT INTO playercard (text) VALUES (?)",
+    "INSERT INTO playercard (text) VALUES ?",
     [req.body.text],
     (err, results) => {
       if (error) {

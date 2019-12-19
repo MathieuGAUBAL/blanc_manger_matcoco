@@ -181,6 +181,16 @@ class Trophy extends Component {
             Relancer une partie
           </button>
         </Link>
+        <Link to='/AddCard'>
+          <button
+            type='submit'
+            value='envoyer'
+            className='btn btn-danger  mb-5 mt-5'
+            onClick={this.reset}
+          >
+            Add a card
+          </button>
+        </Link>
       </div>
     );
   }

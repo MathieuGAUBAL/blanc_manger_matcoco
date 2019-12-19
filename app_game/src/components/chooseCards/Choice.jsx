@@ -46,6 +46,7 @@ class Choice extends Component {
   numeroOne = e => {
     if (e.target.value !== "") {
       let stockNum1 = parseInt(e.target.value);
+
       let playercard1 = this.state.playercard[stockNum1 - 1].text;
       let pcard1 = { type: "get_playercard1", playercard1: playercard1 };
       this.props.dispatch(pcard1);
