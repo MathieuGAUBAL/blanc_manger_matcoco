@@ -18,6 +18,11 @@ import { GET_PLAYERCARD2 } from "./ActionTypes";
 import { GET_PLAYERCARD3 } from "./ActionTypes";
 import { GET_PLAYERCARD4 } from "./ActionTypes";
 
+import { GET_WINNERNAME1 } from "./ActionTypes";
+import { GET_WINNERNAME2 } from "./ActionTypes";
+import { GET_WINNERNAME3 } from "./ActionTypes";
+import { GET_WINNERNAME4 } from "./ActionTypes";
+
 import { GET_GAMECARD } from "./ActionTypes";
 
 const STORE = {
@@ -41,7 +46,12 @@ const STORE = {
   playercard3: "",
   playercard4: "",
 
-  gamecard: ""
+  gamecard: "",
+
+  winnername1: "",
+  winnername2: "",
+  winnername3: "",
+  winnername4: ""
 };
 
 const rootReducer = (state, action) => {
@@ -55,7 +65,6 @@ const rootReducer = (state, action) => {
   let points3 = STORE.points3;
   let points4 = STORE.points4;
 
-
   let numero1 = STORE.numero1;
   let numero2 = STORE.numero2;
   let numero3 = STORE.numero3;
@@ -67,6 +76,11 @@ const rootReducer = (state, action) => {
   let playercard4 = STORE.playercard4;
 
   let gamecard = STORE.gamecard;
+
+  let winnername1 = STORE.winnername1;
+  let winnername2 = STORE.winnername2;
+  let winnername3 = STORE.winnername3;
+  let winnername4 = STORE.winnername4;
 
   switch (action.type) {
     //player
@@ -167,14 +181,38 @@ const rootReducer = (state, action) => {
       console.log(gamecard);
       break;
 
+    case GET_WINNERNAME1.type:
+      STORE.winnername1 = action.winnername1;
+      winnername1 = action.winnername1;
+      console.log(winnername1);
+      break;
+
+    case GET_WINNERNAME2.type:
+      STORE.winnername2 = action.winnername2;
+      winnername2 = action.winnername2;
+      console.log(winnername2);
+      break;
+
+    case GET_WINNERNAME3.type:
+      STORE.winnername3 = action.winnername3;
+      winnername3 = action.winnername3;
+      console.log(winnername3);
+      break;
+
+    case GET_WINNERNAME4.type:
+      STORE.winnername4 = action.winnername4;
+      winnername4 = action.winnername4;
+      console.log(winnername4);
+      break;
+
     default:
       break;
   }
 
-  console.log('Score player 1 : ',STORE.points1);
-  console.log('Score player 2 : ',STORE.points2);
-  console.log('Score player 3 : ',STORE.points3);
-  console.log('Score player 4 : ',STORE.points4);
+  console.log("Score player 1 : ", STORE.points1);
+  console.log("Score player 2 : ", STORE.points2);
+  console.log("Score player 3 : ", STORE.points3);
+  console.log("Score player 4 : ", STORE.points4);
 
   return {
     player1: player1,
@@ -197,7 +235,12 @@ const rootReducer = (state, action) => {
     playercard3: playercard3,
     playercard4: playercard4,
 
-    gamecard: gamecard
+    gamecard: gamecard,
+
+    winnername1: winnername1,
+    winnername2: winnername2,
+    winnername3: winnername3,
+    winnername4: winnername4
   };
 };
 

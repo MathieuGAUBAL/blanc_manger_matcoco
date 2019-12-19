@@ -84,6 +84,49 @@ class Choice extends Component {
     }
   };
 
+  handle = () => {
+    let tabpoints = [
+      this.props.points1,
+      this.props.points2,
+      this.props.points3,
+      this.props.points4
+    ];
+
+    let maxpoints = Math.max(...tabpoints);
+
+    let tabwinner = [];
+
+    for (let i = 0; i < 4; i++) {
+      if (tabpoints[i] === maxpoints) {
+        tabwinner.push(i + 1);
+      }
+    }
+
+    if (tabwinner.includes(1)) {
+      let winnername1 = this.props.player1;
+      let wname1 = { type: "get_winnername1", winnername1: winnername1 };
+      this.props.dispatch(wname1);
+    }
+
+    if (tabwinner.includes(2)) {
+      let winnername2 = this.props.player2;
+      let wname2 = { type: "get_winnername2", winnername2: winnername2 };
+      this.props.dispatch(wname2);
+    }
+
+    if (tabwinner.includes(3)) {
+      let winnername3 = this.props.player3;
+      let wname3 = { type: "get_winnername3", winnername3: winnername3 };
+      this.props.dispatch(wname3);
+    }
+
+    if (tabwinner.includes(4)) {
+      let winnername4 = this.props.player4;
+      let wname4 = { type: "get_winnername4", winnername4: winnername4 };
+      this.props.dispatch(wname4);
+    }
+  };
+
   submitFormNumbers = e => {
     e.preventDefault();
   };
@@ -209,7 +252,6 @@ class Choice extends Component {
                 </label>
               </div>
 
-
               <div className='d-flex flex-row  '>
                 <div className='d-flex justify-content-center buttonScore  '>
                   <Link to='/Trophy'>
@@ -217,6 +259,7 @@ class Choice extends Component {
                       type='submit'
                       value='envoyer'
                       className='btn-block btn btn-lg buttonColor colorBut'
+                      onClick={this.handle}
                     >
                       Fin de Partie
                     </button>{" "}
@@ -224,15 +267,16 @@ class Choice extends Component {
                 </div>
 
                 <div className='d-flex justify-content-center buttonScore'>
-                  <Link className="link-mdr" to='/Answer'><button
-                    type='submit'
-                    value='envoyer'
-                    className='btn-block btn btn-lg buttonColor'
-                  >
-                    Fusion des cartes
-                  </button></Link>
+                  <Link className='link-mdr' to='/Answer'>
+                    <button
+                      type='submit'
+                      value='envoyer'
+                      className='btn-block btn btn-lg buttonColor'
+                    >
+                      Fusion des cartes
+                    </button>
+                  </Link>
                 </div>
-
               </div>
             </form>
           </div>

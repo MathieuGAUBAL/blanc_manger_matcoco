@@ -20,25 +20,7 @@ export const GET_PLAYERCARD4 = { type: "get_playercard4" };
 
 export const GET_GAMECARD = { type: "get_gamecard" };
 
-//EXAMPLE DE COMMANDE
-
-//import { connect } from "react-redux";
-
-//DANS UNE FONCTION
-
-//  let title = this.props.title;
-//       let tit = { type: "get_title", title: title };
-//       this.props.dispatch(tit);
-
-//Exemple DANS COMPOSANT
-
-// const mapStateToProps = state => {
-//   return {
-//     total: state.total,
-//     days: state.days,
-//     checkbox: state.checkbox,
-//     travel: state.travel
-//   };
-// };
-
-// export default connect(mapStateToProps)(Accordion);
+export const GET_WINNERNAME1 = { type: "get_winnername1" };
+export const GET_WINNERNAME2 = { type: "get_winnername2" };
+export const GET_WINNERNAME3 = { type: "get_winnername3" };
+export const GET_WINNERNAME4 = { type: "get_winnername4" };
