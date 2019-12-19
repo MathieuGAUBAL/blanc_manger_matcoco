@@ -1,13 +1,18 @@
 .blabla {
   background: #1b4756;
-  height: 100vh;
+  height: 100%;
 }
 
 .winner-card {
   width: 250px;
   /* border: 2px solid white; */
-  padding-top: 50px;
-  margin-bottom: 30px;
+  padding-top: 2%;
+
+  color: #fdcb34;
+}
+
+.card-text {
+  font-size: 2rem;
   color: white;
 }
 

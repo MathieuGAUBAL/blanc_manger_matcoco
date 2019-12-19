@@ -24,3 +24,10 @@ export const GET_WINNERNAME1 = { type: "get_winnername1" };
 export const GET_WINNERNAME2 = { type: "get_winnername2" };
 export const GET_WINNERNAME3 = { type: "get_winnername3" };
 export const GET_WINNERNAME4 = { type: "get_winnername4" };
+
+export const GET_WINNERIMAGE1 = { type: "get_winnerimage1" };
+export const GET_WINNERIMAGE2 = { type: "get_winnerimage2" };
+export const GET_WINNERIMAGE3 = { type: "get_winnerimage3" };
+export const GET_WINNERIMAGE4 = { type: "get_winnerimage4" };
+
+export const GET_RESETPOINTS = { type: "get_resetpoints" };

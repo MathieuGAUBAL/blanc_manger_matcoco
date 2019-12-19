@@ -23,7 +23,14 @@ import { GET_WINNERNAME2 } from "./ActionTypes";
 import { GET_WINNERNAME3 } from "./ActionTypes";
 import { GET_WINNERNAME4 } from "./ActionTypes";
 
+import { GET_WINNERIMAGE1 } from "./ActionTypes";
+import { GET_WINNERIMAGE2 } from "./ActionTypes";
+import { GET_WINNERIMAGE3 } from "./ActionTypes";
+import { GET_WINNERIMAGE4 } from "./ActionTypes";
+
 import { GET_GAMECARD } from "./ActionTypes";
+
+import { GET_RESETPOINTS } from "./ActionTypes";
 
 const STORE = {
   player1: "",
@@ -51,7 +58,12 @@ const STORE = {
   winnername1: "",
   winnername2: "",
   winnername3: "",
-  winnername4: ""
+  winnername4: "",
+
+  winnerimage1: false,
+  winnerimage2: false,
+  winnerimage3: false,
+  winnerimage4: false
 };
 
 const rootReducer = (state, action) => {
@@ -81,6 +93,11 @@ const rootReducer = (state, action) => {
   let winnername2 = STORE.winnername2;
   let winnername3 = STORE.winnername3;
   let winnername4 = STORE.winnername4;
+
+  let winnerimage1 = STORE.winnerimage1;
+  let winnerimage2 = STORE.winnerimage2;
+  let winnerimage3 = STORE.winnerimage3;
+  let winnerimage4 = STORE.winnerimage4;
 
   switch (action.type) {
     //player
@@ -205,6 +222,37 @@ const rootReducer = (state, action) => {
       console.log(winnername4);
       break;
 
+    case GET_WINNERIMAGE1.type:
+      STORE.winnerimage1 = action.winnerimage1;
+      winnerimage1 = action.winnerimage1;
+      console.log(winnerimage1);
+      break;
+
+    case GET_WINNERIMAGE2.type:
+      STORE.winnerimage2 = action.winnerimage2;
+      winnerimage2 = action.winnerimage2;
+      console.log(winnerimage2);
+      break;
+
+    case GET_WINNERIMAGE3.type:
+      STORE.winnerimage3 = action.winnerimage3;
+      winnerimage3 = action.winnerimage3;
+      console.log(winnerimage3);
+      break;
+
+    case GET_WINNERIMAGE4.type:
+      STORE.winnerimage4 = action.winnerimage4;
+      winnerimage4 = action.winnerimage4;
+      console.log(winnerimage4);
+      break;
+
+    case GET_RESETPOINTS.type:
+      STORE.points1 = 0;
+      STORE.points2 = 0;
+      STORE.points3 = 0;
+      STORE.points4 = 0;
+
+      break;
     default:
       break;
   }
@@ -240,7 +288,12 @@ const rootReducer = (state, action) => {
     winnername1: winnername1,
     winnername2: winnername2,
     winnername3: winnername3,
-    winnername4: winnername4
+    winnername4: winnername4,
+
+    winnerimage1: winnerimage1,
+    winnerimage2: winnerimage2,
+    winnerimage3: winnerimage3,
+    winnerimage4: winnerimage4
   };
 };
 
