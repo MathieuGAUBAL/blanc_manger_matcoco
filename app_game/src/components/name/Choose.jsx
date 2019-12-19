@@ -47,7 +47,7 @@ class Choose extends Component {
     return (
       <div className='d-flex backColor'>
         <div className=' black_marginPseudo col-md-2 col-lg-2'></div>
-        <div className='flex-column'>
+        <div className='flex-column w-100'>
           <div className='d-flex justify-content-center align-items-center col-sm-12 mt-2 '>
             <h1 className='font-pseudo align-items-center'>
               Balance ton pseudo!
@@ -148,7 +148,7 @@ class Choose extends Component {
                     <button
                       type='submit'
                       value='envoyer'
-                      className='btn-block mt-4 mb-5 btn btn-lg buttonColor'
+                      className='btn-blockPseudo  mt-4 mb-5 btn btn-lg buttonColor'
                     >
                       FONCEZ!
                     </button>
