@@ -19,13 +19,11 @@ class Trophy extends Component {
             alt='card image'
           />
           <div className='card-body'>
-            <h4 className='card-title'>
-              {this.props.winnername1} {this.props.winnername2}
-              {this.props.winnername3} {this.props.winnername4}
-            </h4>
-            <p className='card-text'>
-              You won the prize but you're still retarded.
-            </p>
+            <h4 className='card-title'>{this.props.winnername1}</h4>
+            <h4>{this.props.winnername2}</h4>
+            <h4>{this.props.winnername3}</h4>
+            <h4>{this.props.winnername4}</h4>
+            <p className='card-text'>Félicitations</p>
           </div>
         </div>
 
