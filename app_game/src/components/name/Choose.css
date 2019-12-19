@@ -49,10 +49,10 @@
 
 .black_marginPseudo {
   background-color: black;
-  height: 1500px;
+  height: 1600px;
 }
 
-.btn-block {
+.btn-blockPseudo {
   width: auto;
   background: white;
   color: black;
