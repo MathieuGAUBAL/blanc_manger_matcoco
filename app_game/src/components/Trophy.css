@@ -1,0 +1,25 @@
+.blabla {
+    background: #1b4756;
+    height: 100vh;
+}
+
+.winner-card {
+    width: 250px;
+    /* border: 2px solid white; */
+    padding-top: 50px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.card-img-top{
+    border-radius: 50%;
+}
+
+.trophy-image {
+    width: 250px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    font-size: 1.5em;
+}
