@@ -3,7 +3,6 @@ import './App.css';
 import Homepage from './components/Homepage/Homepage';
 import Choose from './components/name/Choose';
 import Choice from './components/chooseCards/Choice';
-import Choice from './components/chooseCards/Choice';
 import Choice from './components/trophy/Trophy';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
