@@ -16,6 +16,7 @@ function App() {
           <Route path='/Choose' component={Choose}/>
           <Route path='/Choice' component={Choice}/>
           <Route path='/Trophy' component={Trophy}/>
+
         </Switch>
       </Router>
 

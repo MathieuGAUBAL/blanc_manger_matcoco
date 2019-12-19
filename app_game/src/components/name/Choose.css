@@ -1,0 +1,54 @@
+* {
+  max-resolution: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.resize {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+}
+
+.imageResize {
+  width: 100%;
+  height: auto;
+}
+
+.select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  background-image: none;
+  border-color: #1c4654;
+  border-width: thin;
+  width: 80%;
+}
+
+.buttonColor {
+  background: #1c4654;
+  color: white;
+  margin-top: 10%;
+}
+
+.font-pseudo {
+  font-size: 1.5rem;
+}
+
+.black_margin {
+  background-color: black;
+
+  height: 1500px;
+}
+
+.btn-block {
+  width: 60%;
+}
+
+@media screen and (min-width: 0px) and (max-width: 720px) {
+  .black_margin {
+    display: none;
+  }
+}
