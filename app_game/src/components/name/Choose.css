@@ -5,19 +5,23 @@
 }
 
 .backColor {
+  height: 100vh;
   background-color: #1c4654;
 }
 
 .resize {
   display: flex;
   justify-content: center;
-  width: 40%;
+  width: 20%;
+  box-shadow: 0 0 15px;
+  border-radius: 50%;
 }
 
 .imageResize {
   width: 100%;
   height: auto;
-  box-shadow: 0 0 10px;
+  box-shadow: 0 0 100px;
+  clip-path:circle(40%);
 }
 
 .labelColor {
@@ -43,7 +47,7 @@
 }
 
 .font-pseudo {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: white;
 }
 
