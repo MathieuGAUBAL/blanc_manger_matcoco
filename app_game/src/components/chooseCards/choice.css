@@ -3,6 +3,7 @@
   height: 6rem;
   color: white;
   font-size: 1rem;
+  border-bottom: 2px solid black;
 }
 
 .mrscore {
@@ -22,20 +23,24 @@ hr {
   border-top: 3px dotted black;
 }
 
-.borderScore {
-  margin-top: 2%;
+.namePlayer {
+  color: #fdcb34;
+}
+
+.colorBut {
+  background-color: #f14e4e;
+  margin-bottom: 0;
 }
 
 .colordiv {
-  background-color: #f14e4e;
+  /* background-color: #f14e4e; */
+  background-color: #1c4654;
   color: white;
-  padding: 10px;
   box-shadow: 0 0 5px black;
-  border-radius: 5px;
 }
 
 .card {
-  height: 50vh;
+  height: 45vh;
   /* width: 70%; */
   margin: auto;
   margin-top: 5%;
@@ -56,7 +61,7 @@ hr {
   margin-top: 10%;
   color: white;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.4rem;
 }
 
 .select {
@@ -73,9 +78,10 @@ hr {
   height: 800px;
 }
 
-.link-mdr{
 
-  width:100%;
+.buttonScore {
+  font-size: 0.8rem;
+  margin: auto;
 }
 
 @media screen and (min-width: 0px) and (max-width: 720px) {

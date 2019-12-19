@@ -95,29 +95,59 @@ class Choice extends Component {
         <div className=' black_margin col-md-2 col-lg-2'></div>
         <div className='flex-column'>
           {/* score mapstatetoprops nom et score */}
-          <div className='score w-100 d-flex flex-column justify-content-around borderScore '>
+
+          <div className='score w-100 d-flex flex-column justify-content-around borderScore colordiv '>
+            <div className='d-flex flex-column justify-content-around'></div>
+
             <div className='d-flex flex-row justify-content-around'>
-              <div className='colordiv'>
-                {this.props.player1} : {this.props.points1} points
+              <div>
+                <div className='namePlayer'>{this.props.player1}</div>
+                <div>{this.props.points1} points</div>
               </div>
+
+              <div>
+                <div className='namePlayer'>{this.props.player2}</div>
+                <div>{this.props.points2} points</div>
+              </div>
+            </div>
+
+            <div className='d-flex flex-row justify-content-around'>
+              <div>
+                <div className='namePlayer'>{this.props.player3}</div>
+                <div>{this.props.points3} points</div>
+              </div>
+
+              <div>
+                <div className='namePlayer'>{this.props.player4}</div>
+                <div>{this.props.points4} points</div>
+              </div>
+            </div>
+          </div>
+
+          {/* <div>
+              <div>
+                <div className=''>{this.props.player1}blablabla</div>
+                <div>{this.props.points1} points</div>
+              </div>
+
               <div className='colordiv'>
                 {this.props.player2} : {this.props.points2} points
               </div>
             </div>
 
-            <div className='d-flex flex-row justify-content-around '>
-              <div className='colordiv'>
-                {this.props.player3} : {this.props.points3} points
-              </div>
-              <div className='colordiv'>
-                {this.props.player4} : {this.props.points4} points
-              </div>
-            </div>
-          </div>
 
+            <div>
+              <div>
+                <div className=''>{this.props.player1}blablabla</div>
+                <div>{this.props.points1} points</div>
+              </div>
+
+              <div className='colordiv'>
+                {this.props.player2} : {this.props.points2} points
+              </div> */}
           {/* card centrale */}
 
-          <div className='card col-9 col-md-6 '>
+          <div className='card col-7 col-md-6 '>
             <div className='d-flex justify-content-center '>
               <h2 className='titleCard'>Blanc Manger Matcoco</h2>
             </div>
@@ -135,7 +165,7 @@ class Choice extends Component {
 
           <div>
             <form className='' onSubmit={this.submitFormNumbers} action=''>
-              <div className='d-flex ml-5 mt-3'>
+              <div className='d-flex ml-5 mt-3 d-flex justify-content-center '>
                 <label>
                   {this.props.player1}:
                   <input
@@ -157,7 +187,7 @@ class Choice extends Component {
                 </label>
               </div>
 
-              <div className='d-flex ml-5 mt-3'>
+              <div className='d-flex ml-5 mt-3 justify-content-center'>
                 <label>
                   {this.props.player3}:
                   <input
@@ -179,14 +209,30 @@ class Choice extends Component {
                 </label>
               </div>
 
-              <div className='d-flex justify-content-center'>
-                <Link className="link-mdr" to='/Answer'><button
-                  type='submit'
-                  value='envoyer'
-                  className='btn-block btn btn-lg buttonColor'
-                >
-                  Fusion des cartes
-                </button></Link>
+
+              <div className='d-flex flex-row  '>
+                <div className='d-flex justify-content-center buttonScore  '>
+                  <Link to='/Trophy'>
+                    <button
+                      type='submit'
+                      value='envoyer'
+                      className='btn-block btn btn-lg buttonColor colorBut'
+                    >
+                      Fin de Partie
+                    </button>{" "}
+                  </Link>
+                </div>
+
+                <div className='d-flex justify-content-center buttonScore'>
+                  <Link className="link-mdr" to='/Answer'><button
+                    type='submit'
+                    value='envoyer'
+                    className='btn-block btn btn-lg buttonColor'
+                  >
+                    Fusion des cartes
+                  </button></Link>
+                </div>
+
               </div>
             </form>
           </div>
