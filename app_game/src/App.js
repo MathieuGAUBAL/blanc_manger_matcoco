@@ -7,10 +7,11 @@ import Trophy from './components/trophy/Trophy';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Answer from './components/anwser/Answer';
 
+// try
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <Router>
         <Switch>
           <Route exact path='/' exact component={Homepage}/>
@@ -20,7 +21,6 @@ function App() {
           <Route path='/Answer' component={Answer}/>
         </Switch>
       </Router>
-
     </div>
   );
 }
