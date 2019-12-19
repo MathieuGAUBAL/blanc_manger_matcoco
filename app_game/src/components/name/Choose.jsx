@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Choose.css";
 import { connect } from "react-redux";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 class Choose extends Component {
   constructor(props) {
@@ -16,56 +16,47 @@ class Choose extends Component {
 
   playerOne = event => {
     this.setState({ player1: event.target.value });
+
+    let player1 = this.state.player1;
+    let play1 = { type: "get_player1", player1: player1 };
+    this.props.dispatch(play1);
   };
 
   playerTwo = event => {
     this.setState({ player2: event.target.value });
+    let player2 = this.state.player2;
+    let play2 = { type: "get_player2", player2: player2 };
+    this.props.dispatch(play2);
   };
 
   playerThree = event => {
     this.setState({ player3: event.target.value });
+    let player3 = this.state.player3;
+    let play3 = { type: "get_player3", player3: player3 };
+    this.props.dispatch(play3);
   };
 
   playerFour = event => {
     this.setState({ player4: event.target.value });
-  };
-
-  submitForm = e => {
-    e.preventDefault();
-
-    console.log('hello')
-
-    let player1 = this.state.player1;
-    let play1 = { type: "get_player1", player1: player1 };
-   
-    this.props.dispatch(play1);
-
-    let player2 = this.state.player2;
-    let play2 = { type: "get_player2", player2: player2 };
-    this.props.dispatch(play2);
-
-    let player3 = this.state.player3;
-    let play3 = { type: "get_player3", player3: player3 };
-    this.props.dispatch(play3);
-
     let player4 = this.state.player4;
     let play4 = { type: "get_player4", player4: player4 };
     this.props.dispatch(play4);
   };
 
   render() {
-    console.log(this.state)
     return (
-      <div className='d-flex '>
-        <div className=' black_margin col-md-2 col-lg-2'></div>
+      <div className='d-flex backColor'>
+        <div className=' black_marginPseudo col-md-2 col-lg-2'></div>
         <div className='flex-column'>
-          <div className='d-flex justify-content-center col-sm-12  '>
-            <h1 className='font-pseudo'>Balance ton pseudo!</h1>
+          <div className='d-flex justify-content-center align-items-center col-sm-12 mt-2 '>
+            <h1 className='font-pseudo align-items-center'>
+              Balance ton pseudo!
+            </h1>
           </div>
           <div className='d-flex justify-content-center col-md-12 col-lg-12'>
-            <form onSubmit={this.submitForm}>
+            <form>
               <div className='d-flex flex-column '>
-                <div className='d-flex '>
+                <div className='d-flex mt-3'>
                   <div className='resize'>
                     <img
                       className='imageResize'
@@ -74,20 +65,20 @@ class Choose extends Component {
                     />
                   </div>
                   <div className='d-flex align-items-center  '>
-                    <label>
+                    <label className='labelColor'>
                       Joueur 1
                       <input
                         type='text'
                         name='J1'
                         value={this.state.player1}
                         onChange={this.playerOne}
-                        className='select'
+                        className='selectPseudo'
                       />
                     </label>
                   </div>
                 </div>
 
-                <div className='d-flex col-xs-12'>
+                <div className='d-flex col-xs-12 mt-3'>
                   <div className='resize'>
                     <img
                       className='imageResize'
@@ -96,20 +87,20 @@ class Choose extends Component {
                     />
                   </div>
                   <div className='d-flex align-items-center  '>
-                    <label>
+                    <label className='labelColor'>
                       Joueur 2
                       <input
                         type='text'
                         name='J1'
                         value={this.state.player2}
                         onChange={this.playerTwo}
-                        className='select'
+                        className='selectPseudo'
                       />
                     </label>
                   </div>
                 </div>
 
-                <div className='d-flex col-xs-12'>
+                <div className='d-flex col-xs-12 mt-3'>
                   <div className='resize'>
                     <img
                       className='imageResize'
@@ -118,20 +109,20 @@ class Choose extends Component {
                     />
                   </div>
                   <div className='d-flex align-items-center  '>
-                    <label>
+                    <label className='labelColor'>
                       Joueur 3
                       <input
                         type='text'
                         name='J1'
                         value={this.state.player3}
                         onChange={this.playerThree}
-                        className='select'
+                        className='selectPseudo'
                       />
                     </label>
                   </div>
                 </div>
 
-                <div className='d-flex col-xs-12'>
+                <div className='d-flex col-xs-12 mt-3'>
                   <div className='resize'>
                     <img
                       className='imageResize'
@@ -140,32 +131,34 @@ class Choose extends Component {
                     />
                   </div>
                   <div className='d-flex align-items-center  '>
-                    <label>
+                    <label className='labelColor'>
                       Joueur 4
                       <input
                         type='text'
                         name='J1'
                         value={this.state.player4}
                         onChange={this.playerFour}
-                        className='select'
+                        className='selectPseudo'
                       />
                     </label>
                   </div>
                 </div>
                 <div className='d-flex justify-content-center '>
-                  <button
-                    type='submit'
-                    value='envoyer'
-                    className='btn-block btn btn-lg buttonColor'
-                  >
-                    Mourir de rire
-                  </button>
+                  <Link to='/choice'>
+                    <button
+                      type='submit'
+                      value='envoyer'
+                      className='btn-block mt-4 mb-5 btn btn-lg buttonColor'
+                    >
+                      FONCEZ!
+                    </button>
+                  </Link>
                 </div>
               </div>
             </form>
           </div>
         </div>
-        <div className=' black_margin col-md-2 col-lg-2 '></div>
+        <div className=' black_marginPseudo col-md-2 col-lg-2 '></div>
       </div>
     );
   }

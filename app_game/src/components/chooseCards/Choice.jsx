@@ -1,56 +1,95 @@
 import React, { Component } from "react";
 import "./choice.css";
 import { connect } from "react-redux";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 class Choice extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      numero1: 0,
-      numero2: 0,
-      numero3: 0,
-      numero4: 0
+      gamecard: "",
+      playercard: [],
+      cards1: "",
+      cards2: "",
+      cards3: "",
+      cards4: ""
     };
   }
 
-  numeroOne = event => {
-    this.setState({ numero1: event.target.value });
+  componentDidMount() {
+    this.getGameCard();
+    this.getPlayerCard();
+  }
+
+  getGameCard = () => {
+    let url = "http://localhost:5000/api/gamecard";
+    fetch(url, { crossdomain: true })
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          gamecard: data[Math.floor(Math.random() * 15)].text
+        });
+      });
   };
 
-  numeroTwo = event => {
-    this.setState({ numero2: event.target.value });
+  getPlayerCard = () => {
+    let url = "http://localhost:5000/api/playercard";
+    fetch(url, { crossdomain: true })
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          playercard: data
+        });
+      });
   };
 
-  numeroThree = event => {
-    this.setState({ numero3: event.target.value });
+  numeroOne = e => {
+    if (e.target.value !== "") {
+      let stockNum1 = parseInt(e.target.value);
+      let playercard1 = this.state.playercard[stockNum1 - 1].text;
+      let pcard1 = { type: "get_playercard1", playercard1: playercard1 };
+      this.props.dispatch(pcard1);
+
+      let gamecard = this.state.gamecard;
+      console.log("gamecard", this.state.gamecard);
+      let gcard1 = { type: "get_gamecard", gamecard: gamecard };
+      this.props.dispatch(gcard1);
+    }
   };
 
-  numeroFour = event => {
-    this.setState({ numero4: event.target.value });
+  numeroTwo = e => {
+    if (e.target.value !== "") {
+      let stockNum2 = parseInt(e.target.value);
+      let playercard2 = this.state.playercard[stockNum2 - 1].text;
+      let pcard2 = { type: "get_playercard2", playercard2: playercard2 };
+      this.props.dispatch(pcard2);
+    }
+  };
+
+  numeroThree = e => {
+    if (e.target.value !== "") {
+      let stockNum3 = parseInt(e.target.value);
+      let playercard3 = this.state.playercard[stockNum3 - 1].text;
+      let pcard3 = { type: "get_playercard3", playercard3: playercard3 };
+      this.props.dispatch(pcard3);
+    }
+  };
+
+  numeroFour = e => {
+    if (e.target.value !== "") {
+      let stockNum4 = parseInt(e.target.value);
+      let playercard4 = this.state.playercard[stockNum4 - 1].text;
+      let pcard4 = { type: "get_playercard4", playercard4: playercard4 };
+      this.props.dispatch(pcard4);
+    }
   };
 
   submitFormNumbers = e => {
     e.preventDefault();
-
-    let numero1 = this.state.numero1;
-    let num1 = { type: "get_numero1", numero1: numero1 };
-    this.props.dispatch(num1);
-
-    let numero2 = this.state.numero2;
-    let num2 = { type: "get_numero2", numero2: numero2 };
-    this.props.dispatch(num2);
-
-    let numero3 = this.state.numero3;
-    let num3 = { type: "get_numero3", numero3: numero3 };
-    this.props.dispatch(num3);
-
-    let numero4 = this.state.numero4;
-    let num4 = { type: "get_numero4", numero4: numero4 };
-    this.props.dispatch(num4);
   };
 
   render() {
+    console.log(this.state.gamecard);
     return (
       <div className='d-flex'>
         <div className=' black_margin col-md-2 col-lg-2'></div>
@@ -84,7 +123,7 @@ class Choice extends Component {
             </div>
 
             <div>
-              <p className='paraCard '>Je crois que j'ai vomi du ....</p>
+              <p className='paraCard '>{this.state.gamecard}</p>
             </div>
           </div>
 
@@ -95,19 +134,14 @@ class Choice extends Component {
           {/* choix joueur */}
 
           <div>
-            <form
-              classname='d-flex'
-              onSubmit={this.submitFormNumbers}
-              action=''
-            >
+            <form className='' onSubmit={this.submitFormNumbers} action=''>
               <div className='d-flex ml-5 mt-3'>
                 <label>
                   {this.props.player1}:
                   <input
                     type='number'
                     name='numero1'
-                    value={this.state.numero1}
-                    onChange={this.numeroOne}
+                    onChange={e => this.numeroOne(e)}
                     className='select ml-3'
                   />
                 </label>
@@ -117,7 +151,6 @@ class Choice extends Component {
                   <input
                     type='number'
                     name='numero2'
-                    value={this.state.numero2}
                     onChange={this.numeroTwo}
                     className='select ml-3'
                   />
@@ -130,7 +163,6 @@ class Choice extends Component {
                   <input
                     type='number'
                     name='number3'
-                    value={this.state.numero3}
                     onChange={this.numeroThree}
                     className='select ml-3'
                   />
@@ -141,7 +173,6 @@ class Choice extends Component {
                   <input
                     type='number'
                     name='number4'
-                    value={this.state.numero4}
                     onChange={this.numeroFour}
                     className='select ml-3'
                   />

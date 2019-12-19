@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.backColor {
+  background-color: #1c4654;
+}
+
 .resize {
   display: flex;
   justify-content: center;
@@ -13,16 +17,21 @@
 .imageResize {
   width: 100%;
   height: auto;
+  box-shadow: 0 0 10px;
 }
 
-.select {
+.labelColor {
+  color: white;
+}
+
+.selectPseudo {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
   outline: 0;
   background-image: none;
-  border-color: #1c4654;
+  border-color: white;
   border-width: thin;
   width: 80%;
 }
@@ -35,20 +44,23 @@
 
 .font-pseudo {
   font-size: 1.5rem;
+  color: white;
 }
 
-.black_margin {
+.black_marginPseudo {
   background-color: black;
-
   height: 1500px;
 }
 
 .btn-block {
-  width: 60%;
+  width: auto;
+  background: white;
+  color: black;
+  margin: 0;
 }
 
 @media screen and (min-width: 0px) and (max-width: 720px) {
-  .black_margin {
+  .black_marginPseudo {
     display: none;
   }
 }
