@@ -17,28 +17,30 @@ class Choose extends Component {
   playerOne = event => {
     this.setState({ player1: event.target.value });
 
-    let player1 = this.state.player1;
+    console.log("hello", event.target.value);
+
+    let player1 = event.target.value;
     let play1 = { type: "get_player1", player1: player1 };
     this.props.dispatch(play1);
   };
 
   playerTwo = event => {
     this.setState({ player2: event.target.value });
-    let player2 = this.state.player2;
+    let player2 = event.target.value;
     let play2 = { type: "get_player2", player2: player2 };
     this.props.dispatch(play2);
   };
 
   playerThree = event => {
     this.setState({ player3: event.target.value });
-    let player3 = this.state.player3;
+    let player3 = event.target.value;
     let play3 = { type: "get_player3", player3: player3 };
     this.props.dispatch(play3);
   };
 
   playerFour = event => {
     this.setState({ player4: event.target.value });
-    let player4 = this.state.player4;
+    let player4 = event.target.value;
     let play4 = { type: "get_player4", player4: player4 };
     this.props.dispatch(play4);
   };
@@ -144,11 +146,31 @@ class Choose extends Component {
                   </div>
                 </div>
                 <div className='d-flex justify-content-center '>
-                  <Link to='/choice'>
+                  <Link
+                    to={
+                      this.state.player1 !== "" &&
+                      this.state.player2 !== "" &&
+                      this.state.player3 !== "" &&
+                      this.state.player4 !== ""
+                        ? "/Choice"
+                        : "/choose"
+                    }
+                  >
                     <button
                       type='submit'
                       value='envoyer'
                       className='btn-blockPseudo  mt-4 mb-5 btn btn-lg buttonColor'
+                      style={
+                        this.state.player1 !== "" &&
+                        this.state.player2 !== "" &&
+                        this.state.player3 !== "" &&
+                        this.state.player4 !== ""
+                          ? {
+                              backgroundColor: "#f14e4e",
+                              color: "white"
+                            }
+                          : { backgroundColor: "#808080", color: "white" }
+                      }
                     >
                       FONCEZ!
                     </button>
