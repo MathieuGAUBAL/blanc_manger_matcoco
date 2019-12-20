@@ -151,6 +151,14 @@ class Choose extends Component {
                       type='submit'
                       value='envoyer'
                       className='btn-blockPseudo  mt-4 mb-5 btn btn-lg buttonColor'
+                      style={
+                        this.state.player1 !== "" &&
+                        this.state.player2 !== "" &&
+                        this.state.player3 !== "" &&
+                        this.state.player4 !== ""
+                          ? { display: "" }
+                          : { display: "none" }
+                      }
                     >
                       FONCEZ!
                     </button>

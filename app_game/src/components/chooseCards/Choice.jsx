@@ -295,11 +295,32 @@ class Choice extends Component {
                 </div>
 
                 <div className='d-flex justify-content-center buttonScore'>
-                  <Link className='link-mdr' to='/Answer'>
+                  <Link
+                    className='link-mdr'
+                    to={
+                      this.props.playercard1 !== "" &&
+                      this.props.playercard2 !== "" &&
+                      this.props.playercard3 !== "" &&
+                      this.props.playercard4 !== ""
+                        ? "/Answer"
+                        : "/choice"
+                    }
+                  >
                     <button
                       type='submit'
                       value='envoyer'
                       className='btn-block btn btn-lg buttonColor'
+                      style={
+                        this.props.playercard1 !== "" &&
+                        this.props.playercard2 !== "" &&
+                        this.props.playercard3 !== "" &&
+                        this.props.playercard4 !== ""
+                          ? {
+                              backgroundColor: "#f14e4e",
+                              color: "white"
+                            }
+                          : { backgroundColor: "#808080", color: "white" }
+                      }
                     >
                       Fusion des cartes
                     </button>
@@ -331,7 +352,12 @@ const mapStateToProps = state => {
     winnerimage1: state.winnerimage1,
     winnerimage2: state.winnerimage2,
     winnerimage3: state.winnerimage3,
-    winnerimage4: state.winnerimage4
+    winnerimage4: state.winnerimage4,
+
+    playercard1: state.playercard1,
+    playercard2: state.playercard2,
+    playercard3: state.playercard3,
+    playercard4: state.playercard4
   };
 };
 
