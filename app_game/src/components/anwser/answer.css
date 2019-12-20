@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 
 
 .answer-group{
@@ -31,4 +31,22 @@
 
 .next-round{
     font-size: 0.9rem;
+}
+
+
+.w3-panel{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  background-color: #F14E4E;
+  height:100vh;
+  width:100vw;
+
+  color:#fff;
+}
+
+.next-round{
+  position:relative;
+  z-index:9999;
 }

@@ -1,6 +1,8 @@
-.accueil {
-  background-color: #1c4654;
-  height: 100vh;
+
+.accueil{
+    background-color: #1c4654;
+    height:100vh;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .bouton-go button {
@@ -24,18 +26,21 @@
 }
 
 .bouton-go {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: #fff;
-  color: #29220a;
-  font-size: 36px;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 40px;
-  width: 30%;
-  height: 10%;
-}
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color:  #d72130;
+    color:#fff;
+    font-size: 36px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    width: 30%;
+    height: 10%;
+    font-weight:bold;
+
+  }
+
