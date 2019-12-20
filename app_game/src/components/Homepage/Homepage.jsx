@@ -9,7 +9,11 @@ class Homepage extends Component {
       <div className='accueil'>
         {playSound("./Happy.mp3")}
         <div className='logo'>
-          <img src='/images/bmc.png' alt='logo accueil' className='imageHome' />
+          <img
+            src='/images/bmc2.png'
+            alt='logo accueil'
+            className='imageHome'
+          />
           <Link to='/choose'>
             <button className='bouton-go'>GO</button>
           </Link>
