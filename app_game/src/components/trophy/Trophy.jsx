@@ -91,7 +91,7 @@ class Trophy extends Component {
         >
           <img
             className='card-img-top'
-            src={this.props.winnerimage1 ? "/images/avatar-lou.png" : ""}
+            src={this.props.winnerimage1 ? "/images/avatar-amo.png" : ""}
             alt={this.props.winnerimage1 ? "card image" : ""}
           />
           <div className='card-body'>
@@ -129,7 +129,7 @@ class Trophy extends Component {
         >
           <img
             className='card-img-top'
-            src={this.props.winnerimage3 ? "/images/avatar-mat.png" : ""}
+            src={this.props.winnerimage3 ? "/images/avatar-jerem.png" : ""}
             alt={this.props.winnerimage3 ? "card image" : ""}
           />
           <div className='card-body'>
@@ -148,7 +148,7 @@ class Trophy extends Component {
         >
           <img
             className='card-img-top'
-            src={this.props.winnerimage4 ? "/images/avatar-arm.png" : ""}
+            src={this.props.winnerimage4 ? "/images/avatar-jane.png" : ""}
             alt={this.props.winnerimage4 ? "card image" : ""}
           />
           <div className='card-body'>

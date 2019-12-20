@@ -5,7 +5,7 @@
 }
 
 .backColor {
-  height: 100vh;
+  height: 100%;
   background-color: #1c4654;
 }
 
@@ -15,14 +15,14 @@
   width: 20%;
   box-shadow: 0 0 15px;
   border-radius: 50%;
-  background-color: #566664
+  background-color: #566664;
 }
 
 .imageResize {
   width: 100%;
   height: auto;
   box-shadow: 0 0 100px;
-  clip-path:circle(40%);
+  clip-path: circle(40%);
 }
 
 .labelColor {
@@ -54,7 +54,7 @@
 
 .black_marginPseudo {
   background-color: black;
-  height: 1600px;
+  height: 1200px;
 }
 
 .btn-blockPseudo {

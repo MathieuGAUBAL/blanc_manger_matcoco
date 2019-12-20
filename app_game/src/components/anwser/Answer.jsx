@@ -139,7 +139,7 @@ class Answer extends Component {
             <div className='w3-panel row  mx-auto'>
               <div className='col-12 align-self-center text  mx-auto'>
                 <h3>Bravo {this.props.player2}!</h3>
-                <p>{`Tu remportes 1 point.`}}</p>
+                <p>{`Tu remportes 1 point.`}</p>
               </div>
             </div>
           )}

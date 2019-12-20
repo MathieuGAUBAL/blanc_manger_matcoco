@@ -46,7 +46,8 @@ class Choice extends Component {
   numeroOne = e => {
     if (
       e.target.value !== "" &&
-      parseInt(e.target.value) <= parseInt(this.state.playercard.length)
+      parseInt(e.target.value) <= parseInt(this.state.playercard.length) &&
+      parseInt(e.target.value) > 0
     ) {
       let stockNum1 = parseInt(e.target.value);
 
@@ -64,7 +65,8 @@ class Choice extends Component {
   numeroTwo = e => {
     if (
       e.target.value !== "" &&
-      parseInt(e.target.value) <= parseInt(this.state.playercard.length)
+      parseInt(e.target.value) <= parseInt(this.state.playercard.length) &&
+      parseInt(e.target.value) > 0
     ) {
       let stockNum2 = parseInt(e.target.value);
       let playercard2 = this.state.playercard[stockNum2 - 1].text;
@@ -76,7 +78,8 @@ class Choice extends Component {
   numeroThree = e => {
     if (
       e.target.value !== "" &&
-      parseInt(e.target.value) <= parseInt(this.state.playercard.length)
+      parseInt(e.target.value) <= parseInt(this.state.playercard.length) &&
+      parseInt(e.target.value) > 0
     ) {
       let stockNum3 = parseInt(e.target.value);
       let playercard3 = this.state.playercard[stockNum3 - 1].text;
@@ -88,7 +91,8 @@ class Choice extends Component {
   numeroFour = e => {
     if (
       e.target.value !== "" &&
-      parseInt(e.target.value) <= parseInt(this.state.playercard.length)
+      parseInt(e.target.value) <= parseInt(this.state.playercard.length) &&
+      parseInt(e.target.value) > 0
     ) {
       let stockNum4 = parseInt(e.target.value);
       let playercard4 = this.state.playercard[stockNum4 - 1].text;
@@ -165,7 +169,7 @@ class Choice extends Component {
     return (
       <div className='d-flex'>
         <div className=' black_margin col-md-2 col-lg-2'></div>
-        <div className='flex-column'>
+        <div className='flex-column  col-md-8 col-lg-8'>
           {/* score mapstatetoprops nom et score */}
 
           <div className='score w-100 d-flex flex-column justify-content-around borderScore colordiv '>
@@ -279,28 +283,6 @@ class Choice extends Component {
                   </div>
                 </div>
               </div>
-
-              {/* <div className='d-flex ml-5 mt-3 d-flex justify-content-center'>
-                <div className='d-flex flex-column'>
-                  <div>{this.props.player3}</div>
-                  <input
-                    type='number'
-                    name='number3'
-                    onChange={this.numeroThree}
-                    className='select ml-3'
-                  />
-                </div>
-
-                <div className='d-flex flex-column'>
-                  <div>{this.props.player4}</div>
-                  <input
-                    type='number'
-                    name='number4'
-                    onChange={this.numeroFour}
-                    className='select ml-3'
-                  />
-                </div>
-              </div> */}
 
               <div className='d-flex flex-row  '>
                 <div className='d-flex justify-content-center buttonScore'>
