@@ -62,7 +62,7 @@ class Choose extends Component {
                   <div className='resize'>
                     <img
                       className='imageResize'
-                      src='/images/avatar-lou.png'
+                      src='/images/avatar-amo.png'
                       alt=''
                     />
                   </div>
@@ -106,7 +106,7 @@ class Choose extends Component {
                   <div className='resize'>
                     <img
                       className='imageResize'
-                      src='/images/avatar-mat.png'
+                      src='/images/avatar-jerem.png'
                       alt=''
                     />
                   </div>
@@ -128,7 +128,7 @@ class Choose extends Component {
                   <div className='resize'>
                     <img
                       className='imageResize'
-                      src='/images/avatar-arm.png'
+                      src='/images/avatar-jane.png'
                       alt=''
                     />
                   </div>

@@ -4,10 +4,12 @@ import "./homepage.css";
 import { playSound, stopSound } from "../../sound-utils";
 
 class Homepage extends Component {
+  music = () => {
+    playSound("./Happy.mp3");
+  };
   render() {
     return (
       <div className='accueil'>
-        {playSound("./Happy.mp3")}
         <div className='logo'>
           <img
             src='/images/bmc2.png'
@@ -17,6 +19,12 @@ class Homepage extends Component {
           <Link to='/choose'>
             <button className='bouton-go'>GO</button>
           </Link>
+        </div>
+
+        <div>
+          <button className='bouton-music' onClick={this.music}>
+            <i class='fa fa-music fa-2x'></i>
+          </button>
         </div>
       </div>
     );
