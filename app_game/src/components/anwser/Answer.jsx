@@ -98,7 +98,8 @@ class Answer extends Component {
         this.state.array_player_answer.push(this.props.playercard3);
         this.state.array_player_answer.push(this.props.playercard4);
     }
-
+    
+  }
 
 
 
