@@ -1,12 +1,15 @@
+
 /* eslint-disable import/first */
 import React, { Component } from 'react';
 import './answer.css';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+
 export const GET_POINTS1 = { type: "get_points1" };
 export const GET_POINTS2 = { type: "get_points2" };
 export const GET_POINTS3 = { type: "get_points3" };
 export const GET_POINTS4 = { type: "get_points4" };
+
 
 
 
@@ -79,13 +82,15 @@ class Answer extends Component {
             randomDescription: randomDescription
         })
 
+
+    }
+  };
+
+  answer_generation = () => {
+    for (let j in this.state.array_player_answer) {
+      this.state.player_answser_ref.push(this.state.array_player_answer[j]);
     }
 
-
-    componentDidMount() {
-        this.getPlayerCard();
-        this.answer_generation();
-    }
 
     getPlayerCard() {
         this.state.array_player_answer.push(this.props.playercard1);

@@ -1,25 +1,30 @@
 .blabla {
-    background: #1b4756;
-    height: 100vh;
+  background: #1b4756;
+  height: 100%;
 }
 
 .winner-card {
-    width: 250px;
-    /* border: 2px solid white; */
-    padding-top: 50px;
-    margin-bottom: 30px;
-    color: white;
+  width: 250px;
+  /* border: 2px solid white; */
+  padding-top: 2%;
+
+  color: #fdcb34;
 }
 
-.card-img-top{
-    border-radius: 50%;
+.card-text {
+  font-size: 2rem;
+  color: white;
+}
+
+.card-img-top {
+  border-radius: 50%;
 }
 
 .trophy-image {
-    width: 250px;
-    margin-bottom: 30px;
+  width: 250px;
+  margin-bottom: 30px;
 }
 
 .btn {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
