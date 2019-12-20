@@ -44,7 +44,10 @@ class Choice extends Component {
   };
 
   numeroOne = e => {
-    if (e.target.value !== "") {
+    if (
+      e.target.value !== "" &&
+      parseInt(e.target.value) <= parseInt(this.state.playercard.length)
+    ) {
       let stockNum1 = parseInt(e.target.value);
 
       let playercard1 = this.state.playercard[stockNum1 - 1].text;
@@ -59,7 +62,10 @@ class Choice extends Component {
   };
 
   numeroTwo = e => {
-    if (e.target.value !== "") {
+    if (
+      e.target.value !== "" &&
+      parseInt(e.target.value) <= parseInt(this.state.playercard.length)
+    ) {
       let stockNum2 = parseInt(e.target.value);
       let playercard2 = this.state.playercard[stockNum2 - 1].text;
       let pcard2 = { type: "get_playercard2", playercard2: playercard2 };
@@ -68,7 +74,10 @@ class Choice extends Component {
   };
 
   numeroThree = e => {
-    if (e.target.value !== "") {
+    if (
+      e.target.value !== "" &&
+      parseInt(e.target.value) <= parseInt(this.state.playercard.length)
+    ) {
       let stockNum3 = parseInt(e.target.value);
       let playercard3 = this.state.playercard[stockNum3 - 1].text;
       let pcard3 = { type: "get_playercard3", playercard3: playercard3 };
@@ -77,7 +86,10 @@ class Choice extends Component {
   };
 
   numeroFour = e => {
-    if (e.target.value !== "") {
+    if (
+      e.target.value !== "" &&
+      parseInt(e.target.value) <= parseInt(this.state.playercard.length)
+    ) {
       let stockNum4 = parseInt(e.target.value);
       let playercard4 = this.state.playercard[stockNum4 - 1].text;
       let pcard4 = { type: "get_playercard4", playercard4: playercard4 };
