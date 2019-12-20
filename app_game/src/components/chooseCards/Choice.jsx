@@ -216,49 +216,79 @@ class Choice extends Component {
 
           <div>
             <form className='' onSubmit={this.submitFormNumbers} action=''>
-              <div className='d-flex ml-5 mt-3 d-flex justify-content-center '>
-                <label>
-                  {this.props.player1}:
-                  <input
-                    type='number'
-                    name='numero1'
-                    onChange={e => this.numeroOne(e)}
-                    className='select ml-3'
-                  />
-                </label>
+              <div className='d-flex mt-3 d-flex justify-content-center '>
+                <div className='d-flex flex-column'>
+                  <div>{this.props.player1}</div>
+                  <div>
+                    <input
+                      type='number'
+                      name='numero1'
+                      onChange={e => this.numeroOne(e)}
+                      className='select '
+                    />
+                  </div>
+                </div>
 
-                <label>
-                  {this.props.player2}:
-                  <input
-                    type='number'
-                    name='numero2'
-                    onChange={this.numeroTwo}
-                    className='select ml-3'
-                  />
-                </label>
+                <div className='d-flex flex-column'>
+                  <div>{this.props.player2}</div>
+                  <div>
+                    <input
+                      type='number'
+                      name='numero2'
+                      onChange={this.numeroTwo}
+                      className='select '
+                    />
+                  </div>
+                </div>
               </div>
 
-              <div className='d-flex ml-5 mt-3 justify-content-center'>
-                <label>
-                  {this.props.player3}:
+              <div className='d-flex mt-3 d-flex justify-content-center '>
+                <div className='d-flex flex-column'>
+                  <div>{this.props.player3}</div>
+                  <div className='d-flex justify-content-center '>
+                    <input
+                      type='number'
+                      name='numero3'
+                      onChange={e => this.numeroThree(e)}
+                      className='select '
+                    />
+                  </div>
+                </div>
+
+                <div className='d-flex flex-column'>
+                  <div>{this.props.player4}</div>
+                  <div>
+                    <input
+                      type='number'
+                      name='numero4'
+                      onChange={this.numeroFour}
+                      className='select'
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* <div className='d-flex ml-5 mt-3 d-flex justify-content-center'>
+                <div className='d-flex flex-column'>
+                  <div>{this.props.player3}</div>
                   <input
                     type='number'
                     name='number3'
                     onChange={this.numeroThree}
                     className='select ml-3'
                   />
-                </label>
+                </div>
 
-                <label>
-                  {this.props.player4}:
+                <div className='d-flex flex-column'>
+                  <div>{this.props.player4}</div>
                   <input
                     type='number'
                     name='number4'
                     onChange={this.numeroFour}
                     className='select ml-3'
                   />
-                </label>
-              </div>
+                </div>
+              </div> */}
 
               <div className='d-flex flex-row  '>
                 <div className='d-flex justify-content-center buttonScore'>

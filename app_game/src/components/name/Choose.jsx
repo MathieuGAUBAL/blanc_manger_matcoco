@@ -146,7 +146,16 @@ class Choose extends Component {
                   </div>
                 </div>
                 <div className='d-flex justify-content-center '>
-                  <Link to='/choice'>
+                  <Link
+                    to={
+                      this.state.player1 !== "" &&
+                      this.state.player2 !== "" &&
+                      this.state.player3 !== "" &&
+                      this.state.player4 !== ""
+                        ? "/Choice"
+                        : "/choose"
+                    }
+                  >
                     <button
                       type='submit'
                       value='envoyer'
@@ -156,8 +165,11 @@ class Choose extends Component {
                         this.state.player2 !== "" &&
                         this.state.player3 !== "" &&
                         this.state.player4 !== ""
-                          ? { display: "" }
-                          : { display: "none" }
+                          ? {
+                              backgroundColor: "#f14e4e",
+                              color: "white"
+                            }
+                          : { backgroundColor: "#808080", color: "white" }
                       }
                     >
                       FONCEZ!
